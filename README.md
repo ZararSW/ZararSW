@@ -1,1 +1,1 @@
-<img src="https://tryhackme-badges.s3.amazonaws.com/zarrarkolachi.png" alt="3036415" />
+![tryhackme stats](https://raw.githubusercontent.com/zarrarkolachi/zarrarkolachi/master/assets/thm_propic.png)
