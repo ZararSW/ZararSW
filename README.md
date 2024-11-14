@@ -1,1 +1,1 @@
-![tryhackme stats](https://raw.githubusercontent.com/zarrarkolachi/zarrarkolachi/master/assets/thm_propic.png)
+![tryhackme stats](https://raw.githubusercontent.com/zarrarkolachi/zarrarkolachi/master/thm_propic.png)
