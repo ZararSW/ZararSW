@@ -1,1 +1,1 @@
-![TryHackMe Badge](https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3036415)
+![TryHackMe Badge](<img src="https://tryhackme-badges.s3.amazonaws.com/zarrarkolachi.png" alt="Your Image Badge" />)
