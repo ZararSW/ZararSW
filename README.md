@@ -14,7 +14,7 @@
 
  🌱 I’m currently learning **Python, Network Pentesting, Blue Teaming, Bash Scripting**
 
-💬 Ask me about **Web Pentesting, Kali Linux... or anything [here](https://github.com/iAsadPanhwar/iAsadPanhwar/issues)**
+💬 Ask me about **Web Pentesting, Kali Linux, CTFs... or anything [here](https://github.com/ZararSW/ZararSW/issues)**
 
 ⚡ Fun fact **Your brain is constantly eating itself.**
 
@@ -35,7 +35,6 @@
 <h2 align="center">⚒️ Languages-Frameworks-Tools ⚒️</h2>
 <br/>
 <div align="center">
-    <img src="https://skillicons.dev/icons?i="azure" /><br>
     <img src="https://skillicons.dev/icons?i=python,mysql,docker" /><br>
 </div>
 
