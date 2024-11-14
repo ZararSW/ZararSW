@@ -10,7 +10,8 @@
 
 <div align="center">
  
-<img src="https://tryhackme-badges.s3.amazonaws.com/zarrarkolachi.png" alt="Your Image Badge" />
+<img src="https://tryhackme-badges.s3.amazonaws.com/zarrarkolachi.png" alt="Zarrar Kolachi's TryHackMe Badge" />
+
 
  🌱 I’m currently learning **Python, Network Pentesting, Blue Teaming, Bash Scripting**
 
