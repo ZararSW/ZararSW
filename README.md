@@ -48,7 +48,7 @@
 
 
   
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=iAsadPanhwar&theme=gotham&hide_border=false&cache_seconds=21600)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ZararSW&theme=gotham&hide_border=false&cache_seconds=21600)
 
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ZararSW&theme=dark&cache_seconds=21600"/>
 
