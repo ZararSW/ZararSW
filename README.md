@@ -12,6 +12,7 @@
     
 <img src="https://tryhackme-badges.s3.amazonaws.com/zarrar.png" alt="Your Image Badge" />
 
+
  🌱 I’m currently learning **Python, Network Pentesting, Blue Teaming, Bash Scripting**
 
 💬 Ask me about **Web Pentesting, Kali Linux, CTFs... or anything [here](https://github.com/ZararSW/ZararSW/issues)**
