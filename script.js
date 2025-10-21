@@ -107,7 +107,7 @@ const observer = new IntersectionObserver((entries) => {
 // Observe all sections and cards
 document.addEventListener('DOMContentLoaded', () => {
     const elementsToAnimate = document.querySelectorAll(
-        '.about-item, .skill-category, .achievement-card, .contact-card, .expertise-bar'
+        '.about-item, .skill-category, .achievement-card, .contact-card, .expertise-item'
     );
     
     elementsToAnimate.forEach(element => {
@@ -115,27 +115,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Animate progress bars when visible
-const progressObserver = new IntersectionObserver((entries) => {
+// Animate expertise items when visible
+const expertiseObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const progress = entry.target.querySelector('.progress');
-            if (progress) {
-                const width = progress.style.width;
-                progress.style.width = '0';
-                setTimeout(() => {
-                    progress.style.width = width;
-                }, 100);
-            }
-            progressObserver.unobserve(entry.target);
+            entry.target.classList.add('fade-in');
+            expertiseObserver.unobserve(entry.target);
         }
     });
-}, { threshold: 0.5 });
+}, { threshold: 0.3 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const expertiseBars = document.querySelectorAll('.expertise-bar');
-    expertiseBars.forEach(bar => {
-        progressObserver.observe(bar);
+    const expertiseItems = document.querySelectorAll('.expertise-item');
+    expertiseItems.forEach(item => {
+        expertiseObserver.observe(item);
     });
 });
 

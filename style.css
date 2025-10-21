@@ -290,11 +290,41 @@ body {
     background: var(--gradient-2);
     color: var(--dark-bg);
     box-shadow: var(--shadow-2);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::before {
+    width: 300px;
+    height: 300px;
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4), 0 0 20px rgba(0, 255, 136, 0.3);
+    animation: glow 1.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4), 0 0 20px rgba(0, 255, 136, 0.3);
+    }
+    50% {
+        box-shadow: 0 10px 40px rgba(0, 255, 136, 0.6), 0 0 30px rgba(0, 255, 136, 0.5);
+    }
 }
 
 .btn-secondary {
@@ -593,7 +623,7 @@ section {
     text-align: center;
 }
 
-/* Expertise Bars */
+/* Expertise Section */
 .expertise-section {
     background: var(--card-bg);
     padding: 2rem;
@@ -607,41 +637,52 @@ section {
     font-size: 1.5rem;
 }
 
-.expertise-bars {
-    display: flex;
-    flex-direction: column;
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }
 
-.expertise-bar {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.expertise-item {
+    background: rgba(0, 255, 136, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    transition: var(--transition);
 }
 
-.expertise-label {
-    display: flex;
-    justify-content: space-between;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
+.expertise-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 20px rgba(0, 255, 136, 0.2);
 }
 
-.progress-bar {
-    height: 10px;
-    background: rgba(0, 255, 136, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progress {
-    height: 100%;
+.expertise-icon {
+    width: 50px;
+    height: 50px;
     background: var(--gradient-2);
     border-radius: 10px;
-    animation: progress-fill 1.5s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
-@keyframes progress-fill {
-    from { width: 0; }
+.expertise-icon i {
+    font-size: 1.5rem;
+    color: var(--dark-bg);
+}
+
+.expertise-item h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.expertise-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
 /* Achievements Section */

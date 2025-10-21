@@ -14,11 +14,11 @@
 
 
 
- 🌱 I’m currently learning **Python, Network Pentesting, Blue Teaming, Bash Scripting**
+🌱 I'm currently learning **Network Pentesting, Blue Teaming, Bash Scripting, Security Automation**
 
 💬 Ask me about **Web Pentesting, Kali Linux, CTFs... or anything [here](https://github.com/ZararSW/ZararSW/issues)**
 
-⚡ Fun fact **Your brain is constantly eating itself.**
+⚡ Fun fact **Over 90% of successful cyberattacks start with a phishing email.**
 
 </div>
  
