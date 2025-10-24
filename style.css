@@ -7,7 +7,7 @@
     --darker-bg: #050814;
     --card-bg: #1a1f3a;
     --text-primary: #ffffff;
-    --text-secondary: #b4b4b4;
+    --text-secondary: #c9d1d9;
     --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --gradient-2: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
     --shadow-1: 0 10px 40px rgba(0, 255, 136, 0.1);
@@ -96,6 +96,16 @@ body {
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+.nav-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+.hamburger:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
 }
 
 .hamburger {
@@ -337,6 +347,11 @@ body {
     background: var(--primary-color);
     color: var(--dark-bg);
     transform: translateY(-3px);
+}
+
+.btn:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
 }
 
 /* Terminal */
@@ -623,6 +638,14 @@ section {
     text-align: center;
 }
 
+.proficiency {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--primary-color);
+    margin-top: 0.25rem;
+    font-style: italic;
+}
+
 /* Expertise Section */
 .expertise-section {
     background: var(--card-bg);
@@ -819,6 +842,17 @@ section {
     box-shadow: var(--shadow-2);
 }
 
+.social-btn:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+.contact-card a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
 /* Footer */
 .footer {
     background: var(--darker-bg);
@@ -842,6 +876,311 @@ section {
 
 .visitor-badge {
     margin-top: 1rem;
+}
+
+/* Bug Bounty Section */
+.bugbounty {
+    background: var(--dark-bg);
+}
+
+.bugbounty-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bugbounty-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+.bugbounty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.bugbounty-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 136, 0.1);
+    transition: var(--transition);
+}
+
+.bugbounty-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-1);
+    border-color: var(--primary-color);
+}
+
+.bb-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.bb-icon i {
+    font-size: 1.8rem;
+    color: var(--dark-bg);
+}
+
+.bugbounty-card h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+.platform-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.platform-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    padding: 0.5rem;
+    background: rgba(0, 255, 136, 0.05);
+    border-radius: 5px;
+}
+
+.platform-item i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.vuln-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.vuln-tag {
+    background: rgba(0, 255, 136, 0.1);
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.methodology-list {
+    list-style: none;
+    padding: 0;
+}
+
+.methodology-list li {
+    color: var(--text-secondary);
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: rgba(0, 255, 136, 0.05);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.methodology-list i {
+    color: var(--primary-color);
+}
+
+.bugbounty-note {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.bugbounty-note i {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.bugbounty-note p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Projects Section */
+.projects {
+    background: var(--darker-bg);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 136, 0.1);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-1);
+    border-color: var(--primary-color);
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-header i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.project-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.project-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.project-link:hover {
+    gap: 1rem;
+    color: var(--secondary-color);
+}
+
+.project-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.github-cta {
+    text-align: center;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.github-cta p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Enhanced Achievement Cards */
+.achievement-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+
+.achievement-link:hover {
+    gap: 1rem;
+    color: var(--secondary-color);
+}
+
+.achievement-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.htb-badge img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cert-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(0, 255, 136, 0.05);
+    border-radius: 5px;
+    color: var(--text-secondary);
+}
+
+.cert-item i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.github-metrics {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.metric {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.metric i {
+    color: var(--primary-color);
 }
 
 /* Responsive Design */
