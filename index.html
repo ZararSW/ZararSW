@@ -11,32 +11,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+    
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container">
             <div class="nav-brand">
-                <span class="glitch" data-text="ZA">ZA</span>
+                <span class="glitch" data-text="ZA" aria-label="Zarar Ahmed">ZA</span>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#bugbounty" class="nav-link">Bug Bounty</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="#home" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#bugbounty" class="nav-link" role="menuitem">Bug Bounty</a></li>
+                <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#achievements" class="nav-link" role="menuitem">Achievements</a></li>
+                <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="matrix-bg"></div>
+        <div id="main-content"></div>
+        <div class="matrix-bg" aria-hidden="true"></div>
         <div class="hero-content">
             <div class="hero-text">
                 <p class="greeting">Hi There! <span class="wave">👋</span></p>
@@ -52,19 +56,19 @@
                     CTF challenges, and security research.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#projects" class="btn btn-secondary">View Projects</a>
-                    <a href="https://drive.google.com/file/d/YOUR_RESUME_ID/view" target="_blank" class="btn btn-secondary" aria-label="Download Resume">
-                        <i class="fas fa-download"></i> Resume
+                    <a href="#contact" class="btn btn-primary" aria-label="Get in touch with me">Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary" aria-label="View my projects">View Projects</a>
+                    <a href="https://drive.google.com/file/d/YOUR_RESUME_ID/view" target="_blank" class="btn btn-secondary" aria-label="Download my resume (opens in new tab)">
+                        <i class="fas fa-download" aria-hidden="true"></i> Resume
                     </a>
                 </div>
             </div>
             <div class="hero-image">
-                <div class="terminal-window">
+                <div class="terminal-window" role="presentation">
                     <div class="terminal-header">
-                        <span class="terminal-button red"></span>
-                        <span class="terminal-button yellow"></span>
-                        <span class="terminal-button green"></span>
+                        <span class="terminal-button red" aria-hidden="true"></span>
+                        <span class="terminal-button yellow" aria-hidden="true"></span>
+                        <span class="terminal-button green" aria-hidden="true"></span>
                     </div>
                     <div class="terminal-body">
                         <p><span class="prompt">zarar@kali</span>:<span class="path">~</span>$ whoami</p>
@@ -98,22 +102,22 @@
                     </p>
                     <div class="about-grid">
                         <div class="about-item">
-                            <i class="fas fa-shield-alt"></i>
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
                             <h3>Security First</h3>
                             <p>Committed to identifying vulnerabilities and implementing robust security solutions</p>
                         </div>
                         <div class="about-item">
-                            <i class="fas fa-code"></i>
+                            <i class="fas fa-code" aria-hidden="true"></i>
                             <h3>Continuous Learning</h3>
                             <p>Always exploring new techniques, tools, and methodologies in cybersecurity</p>
                         </div>
                         <div class="about-item">
-                            <i class="fas fa-trophy"></i>
+                            <i class="fas fa-trophy" aria-hidden="true"></i>
                             <h3>CTF Player</h3>
                             <p>Active participant in Capture The Flag competitions and security challenges</p>
                         </div>
                         <div class="about-item">
-                            <i class="fas fa-users"></i>
+                            <i class="fas fa-users" aria-hidden="true"></i>
                             <h3>Community Focused</h3>
                             <p>Sharing knowledge and collaborating with the cybersecurity community</p>
                         </div>
@@ -136,7 +140,7 @@
                         </p>
                     </div>
                     <div class="fun-fact">
-                        <i class="fas fa-lightbulb"></i>
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
                         <p><strong>Personal Insight:</strong> My favorite vulnerability class is SQL Injection - 
                         it's fascinating how a simple input validation issue can lead to complete database compromise. 
                         Always sanitize your inputs! 💉</p>
