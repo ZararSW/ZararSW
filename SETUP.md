@@ -75,6 +75,19 @@ TTL: Automatic
 1. In GitHub Pages settings, check "Enforce HTTPS"
 2. This may take a few minutes to activate
 
+### 7. Troubleshooting - Site Not Updating
+
+If your site updates are not appearing:
+
+1. **Clear browser cache**: Press `Ctrl+Shift+Delete` (or `Cmd+Shift+Delete` on Mac) and clear cached files
+2. **Hard refresh**: Press `Ctrl+F5` (or `Cmd+Shift+R` on Mac) on your website
+3. **Try incognito/private mode**: Open your site in a new incognito window
+4. **Wait for deployment**: Check GitHub Actions tab to ensure the deployment workflow completed successfully
+5. **Clear CDN cache**: If using Cloudflare or another CDN, purge the cache from their dashboard
+6. **DNS propagation**: New domain changes may take up to 48 hours to fully propagate
+
+The site includes cache-busting meta tags and versioned asset URLs to help prevent caching issues.
+
 ## Local Development
 
 To test the portfolio locally:
