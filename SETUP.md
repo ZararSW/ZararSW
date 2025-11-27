@@ -7,8 +7,8 @@ To deploy this portfolio website with your Namecheap domain:
 ### 1. Enable GitHub Pages
 
 1. Go to your repository settings: `https://github.com/ZararSW/ZararSW/settings/pages`
-2. Under "Source", select the branch you want to deploy (usually `main` or `master`)
-3. Select the root folder `/` as the source
+2. Under "Build and deployment" → "Source", select **"GitHub Actions"**
+3. The deployment workflow is already configured in `.github/workflows/deploy.yml`
 4. Click "Save"
 
 ### 2. Configure Your Namecheap Domain
@@ -51,21 +51,26 @@ Value: zararsw.github.io
 TTL: Automatic
 ```
 
-### 3. Update CNAME File
+### 3. Configure Custom Domain in GitHub Pages
 
-1. Update the `CNAME` file in this repository with your actual domain name
-2. For example, if your domain is `zaraahmed.com`, the CNAME file should contain:
-   ```
-   zaraahmed.com
-   ```
+1. In GitHub repository settings, go to "Pages"
+2. Under "Custom domain", enter: `zararkolachi.me`
+3. Click "Save"
+4. Wait for DNS check to complete
+5. Check "Enforce HTTPS" once DNS is verified
 
-### 4. Verify Setup
+### 4. Update CNAME File (Already Done)
+
+1. The `CNAME` file in this repository already contains: `zararkolachi.me`
+2. No changes needed - the domain is preconfigured
+
+### 5. Verify Setup
 
 1. Wait 10-30 minutes for DNS propagation
 2. Visit your domain to see if the portfolio is live
-3. In GitHub repository settings under Pages, you should see "Your site is published at https://yourdomain.com"
+3. In GitHub repository settings under Pages, you should see "Your site is published at https://zararkolachi.me"
 
-### 5. Enable HTTPS (Recommended)
+### 6. Enable HTTPS (Recommended)
 
 1. In GitHub Pages settings, check "Enforce HTTPS"
 2. This may take a few minutes to activate
