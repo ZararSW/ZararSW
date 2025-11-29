@@ -4,14 +4,16 @@ const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 
 hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+    const isExpanded = navMenu.classList.toggle('active');
     hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isExpanded);
 });
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
     });
 });
 
