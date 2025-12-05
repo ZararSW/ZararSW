@@ -15,30 +15,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+    
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container">
             <div class="nav-brand">
-                <span class="glitch" data-text="ZA">ZA</span>
+                <span class="glitch" data-text="ZA" aria-label="Zarar Ahmed">ZA</span>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="#home" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#bugbounty" class="nav-link" role="menuitem">Bug Bounty</a></li>
+                <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#achievements" class="nav-link" role="menuitem">Achievements</a></li>
+                <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="matrix-bg"></div>
+        <div id="main-content"></div>
+        <div class="matrix-bg" aria-hidden="true"></div>
         <div class="hero-content">
             <div class="hero-text">
                 <p class="greeting">Hi There! <span class="wave">👋</span></p>
@@ -54,16 +60,19 @@
                     CTF challenges, and security research.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#achievements" class="btn btn-secondary">View Achievements</a>
+                    <a href="#contact" class="btn btn-primary" aria-label="Get in touch with me">Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary" aria-label="View my projects">View Projects</a>
+                    <a href="https://drive.google.com/file/d/YOUR_RESUME_ID/view" target="_blank" class="btn btn-secondary" aria-label="Download my resume (opens in new tab)">
+                        <i class="fas fa-download" aria-hidden="true"></i> Resume
+                    </a>
                 </div>
             </div>
             <div class="hero-image">
-                <div class="terminal-window">
+                <div class="terminal-window" role="presentation">
                     <div class="terminal-header">
-                        <span class="terminal-button red"></span>
-                        <span class="terminal-button yellow"></span>
-                        <span class="terminal-button green"></span>
+                        <span class="terminal-button red" aria-hidden="true"></span>
+                        <span class="terminal-button yellow" aria-hidden="true"></span>
+                        <span class="terminal-button green" aria-hidden="true"></span>
                     </div>
                     <div class="terminal-body">
                         <p><span class="prompt">zarar@kali</span>:<span class="path">~</span>$ whoami</p>
@@ -91,26 +100,28 @@
                 <div class="about-text">
                     <p class="about-intro">
                         I'm a dedicated cybersecurity professional specializing in penetration testing and security research.
-                        My journey has been driven by curiosity and a commitment to making the digital world safer.
+                        My journey started with curiosity about how systems work and evolved into a passion for finding vulnerabilities
+                        and making the digital world safer. From participating in CTF competitions to discovering real-world bugs, 
+                        I'm committed to continuous learning and contributing to the security community.
                     </p>
                     <div class="about-grid">
                         <div class="about-item">
-                            <i class="fas fa-shield-alt"></i>
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
                             <h3>Security First</h3>
                             <p>Committed to identifying vulnerabilities and implementing robust security solutions</p>
                         </div>
                         <div class="about-item">
-                            <i class="fas fa-code"></i>
+                            <i class="fas fa-code" aria-hidden="true"></i>
                             <h3>Continuous Learning</h3>
                             <p>Always exploring new techniques, tools, and methodologies in cybersecurity</p>
                         </div>
                         <div class="about-item">
-                            <i class="fas fa-trophy"></i>
+                            <i class="fas fa-trophy" aria-hidden="true"></i>
                             <h3>CTF Player</h3>
                             <p>Active participant in Capture The Flag competitions and security challenges</p>
                         </div>
                         <div class="about-item">
-                            <i class="fas fa-users"></i>
+                            <i class="fas fa-users" aria-hidden="true"></i>
                             <h3>Community Focused</h3>
                             <p>Sharing knowledge and collaborating with the cybersecurity community</p>
                         </div>
@@ -122,11 +133,21 @@
                             <span class="tag">Blue Teaming</span>
                             <span class="tag">Bash Scripting</span>
                             <span class="tag">Security Automation</span>
+                            <span class="tag">Cloud Security (AWS)</span>
+                            <span class="tag">Mobile App Testing</span>
+                            <span class="tag">Web Fuzzing</span>
+                            <span class="tag">API Security</span>
                         </div>
+                        <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 0.95rem;">
+                            Focusing on these areas to expand my offensive and defensive security capabilities, 
+                            with special interest in cloud infrastructure security and modern application testing.
+                        </p>
                     </div>
                     <div class="fun-fact">
-                        <i class="fas fa-shield-alt"></i>
-                        <p><strong>Fun fact:</strong> Over 90% of successful cyberattacks start with a phishing email. 🔒</p>
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        <p><strong>Personal Insight:</strong> My favorite vulnerability class is SQL Injection - 
+                        it's fascinating how a simple input validation issue can lead to complete database compromise. 
+                        Always sanitize your inputs! 💉</p>
                     </div>
                 </div>
             </div>
@@ -141,11 +162,27 @@
             
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Scripting</h3>
+                    <h3><i class="fas fa-code"></i> Scripting & Programming</h3>
                     <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="https://skillicons.dev/icons?i=python" alt="Python">
+                            <span>Python</span>
+                            <small class="proficiency">Advanced</small>
+                        </div>
                         <div class="skill-item">
                             <img src="https://skillicons.dev/icons?i=bash" alt="Bash">
                             <span>Bash</span>
+                            <small class="proficiency">Intermediate</small>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://skillicons.dev/icons?i=javascript" alt="JavaScript">
+                            <span>JavaScript</span>
+                            <small class="proficiency">Intermediate</small>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://skillicons.dev/icons?i=powershell" alt="PowerShell">
+                            <span>PowerShell</span>
+                            <small class="proficiency">Beginner</small>
                         </div>
                     </div>
                 </div>
@@ -179,6 +216,10 @@
                             <img src="https://skillicons.dev/icons?i=linux" alt="Linux">
                             <span>Linux</span>
                         </div>
+                        <div class="skill-item">
+                            <img src="https://skillicons.dev/icons?i=aws" alt="AWS">
+                            <span>AWS</span>
+                        </div>
                     </div>
                 </div>
 
@@ -194,12 +235,44 @@
                             <span>Burp Suite</span>
                         </div>
                         <div class="skill-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>OWASP ZAP</span>
+                        </div>
+                        <div class="skill-item">
                             <i class="fas fa-network-wired"></i>
                             <span>Nmap</span>
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-spider"></i>
                             <span>Metasploit</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQLMap</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-search"></i>
+                            <span>Wireshark</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-fingerprint"></i>
+                            <span>Hydra</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-sitemap"></i>
+                            <span>Subfinder</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Amass</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Gobuster</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-user-secret"></i>
+                            <span>Nikto</span>
                         </div>
                     </div>
                 </div>
@@ -241,6 +314,158 @@
         </div>
     </section>
 
+    <!-- Bug Bounty Section -->
+    <section id="bugbounty" class="bugbounty">
+        <div class="container">
+            <h2 class="section-title">Bug Bounty <span class="highlight">Experience</span></h2>
+            <p class="section-subtitle">Hunting for vulnerabilities and making the web safer</p>
+            
+            <div class="bugbounty-content">
+                <div class="bugbounty-intro">
+                    <p>
+                        Active participant in bug bounty programs, focusing on finding and responsibly disclosing 
+                        security vulnerabilities in web applications and APIs. My approach combines automated 
+                        reconnaissance with manual testing to uncover critical security issues.
+                    </p>
+                </div>
+
+                <div class="bugbounty-grid">
+                    <div class="bugbounty-card">
+                        <div class="bb-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Platforms</h3>
+                        <div class="platform-list">
+                            <div class="platform-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>HackerOne</span>
+                            </div>
+                            <div class="platform-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Bugcrowd</span>
+                            </div>
+                            <div class="platform-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Synack (Red Team)</span>
+                            </div>
+                            <div class="platform-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Intigriti</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bugbounty-card">
+                        <div class="bb-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h3>Vulnerability Types</h3>
+                        <div class="vuln-tags">
+                            <span class="vuln-tag">SQL Injection</span>
+                            <span class="vuln-tag">XSS (Reflected & Stored)</span>
+                            <span class="vuln-tag">CSRF</span>
+                            <span class="vuln-tag">IDOR</span>
+                            <span class="vuln-tag">Authentication Bypass</span>
+                            <span class="vuln-tag">API Security</span>
+                            <span class="vuln-tag">SSRF</span>
+                            <span class="vuln-tag">XXE</span>
+                        </div>
+                    </div>
+
+                    <div class="bugbounty-card">
+                        <div class="bb-icon">
+                            <i class="fas fa-crosshairs"></i>
+                        </div>
+                        <h3>Methodology</h3>
+                        <ul class="methodology-list">
+                            <li><i class="fas fa-angle-right"></i> Reconnaissance & Asset Discovery</li>
+                            <li><i class="fas fa-angle-right"></i> Subdomain Enumeration</li>
+                            <li><i class="fas fa-angle-right"></i> Parameter Analysis & Fuzzing</li>
+                            <li><i class="fas fa-angle-right"></i> Manual Security Testing</li>
+                            <li><i class="fas fa-angle-right"></i> Responsible Disclosure</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bugbounty-note">
+                    <i class="fas fa-info-circle"></i>
+                    <p>
+                        All findings are reported through official bug bounty platforms following responsible disclosure practices.
+                        Specific details and acknowledgments are confidential per platform policies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects & <span class="highlight">Write-ups</span></h2>
+            <p class="section-subtitle">CTF solutions, security research, and open-source contributions</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-book"></i>
+                        <h3>CTF Write-ups</h3>
+                    </div>
+                    <p>Detailed solutions and walkthroughs for various CTF challenges from platforms like TryHackMe, 
+                    HackTheBox, and CTF competitions. Documenting my approach to solving security challenges.</p>
+                    <div class="project-tags">
+                        <span class="tag">Web Exploitation</span>
+                        <span class="tag">Cryptography</span>
+                        <span class="tag">Reverse Engineering</span>
+                    </div>
+                    <a href="https://github.com/ZararSW?tab=repositories" target="_blank" class="project-link" aria-label="View CTF write-ups on GitHub">
+                        View on GitHub <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Security Tools</h3>
+                    </div>
+                    <p>Custom security automation scripts and tools developed to streamline penetration testing 
+                    workflows, reconnaissance, and vulnerability assessment tasks.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Bash</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                    <a href="https://github.com/ZararSW?tab=repositories" target="_blank" class="project-link" aria-label="View security tools on GitHub">
+                        View on GitHub <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-newspaper"></i>
+                        <h3>Security Research</h3>
+                    </div>
+                    <p>Research articles and blog posts covering the latest security trends, vulnerability analysis, 
+                    and defensive security strategies. Sharing knowledge with the community.</p>
+                    <div class="project-tags">
+                        <span class="tag">Research</span>
+                        <span class="tag">Analysis</span>
+                        <span class="tag">Documentation</span>
+                    </div>
+                    <a href="https://github.com/ZararSW/ZararSW/issues" target="_blank" class="project-link" aria-label="Read research articles">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="github-cta">
+                <p>Explore all my projects and contributions on GitHub</p>
+                <a href="https://github.com/ZararSW?tab=repositories" target="_blank" class="btn btn-primary" aria-label="Visit GitHub profile">
+                    <i class="fab fa-github"></i> Visit GitHub Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Achievements Section -->
     <section id="achievements" class="achievements">
         <div class="container">
@@ -252,13 +477,57 @@
                     <div class="thm-badge">
                         <img src="https://tryhackme-badges.s3.amazonaws.com/zarrar.png" alt="TryHackMe Badge" />
                     </div>
-                    <p>Active member of the TryHackMe community, completing rooms and challenges</p>
+                    <p>Active member completing rooms and challenges in various security domains</p>
+                    <a href="https://tryhackme.com/p/zarrar" target="_blank" class="achievement-link" aria-label="View TryHackMe profile">
+                        View Profile <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="achievement-card">
+                    <h3><i class="fas fa-cube"></i> Hack The Box</h3>
+                    <div class="htb-badge">
+                        <img src="https://www.hackthebox.eu/badge/image/YOUR_HTB_ID" alt="Hack The Box Badge" 
+                             onerror="this.src='https://via.placeholder.com/300x100/1a1f3a/00ff88?text=HTB+Profile'" />
+                    </div>
+                    <p>Practicing on realistic penetration testing scenarios and vulnerable machines</p>
+                    <a href="https://app.hackthebox.com/profile/YOUR_HTB_ID" target="_blank" class="achievement-link" aria-label="View Hack The Box profile">
+                        View Profile <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="achievement-card">
+                    <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fas fa-award"></i>
+                            <span>Pursuing OSCP</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-award"></i>
+                            <span>PortSwigger Academy Certifications</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-award"></i>
+                            <span>TryHackMe Learning Paths</span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 1rem;">Continuously working towards industry-recognized certifications</p>
                 </div>
 
                 <div class="achievement-card">
                     <h3><i class="fab fa-github"></i> GitHub Stats</h3>
                     <div class="github-stats">
                         <img src="https://github-readme-streak-stats.herokuapp.com/?user=ZararSW&theme=gotham&hide_border=false" alt="GitHub Streak" />
+                    </div>
+                    <div class="github-metrics">
+                        <div class="metric">
+                            <i class="fas fa-code"></i>
+                            <span>Active Contributor</span>
+                        </div>
+                        <div class="metric">
+                            <i class="fas fa-star"></i>
+                            <span>Open Source</span>
+                        </div>
                     </div>
                 </div>
 
